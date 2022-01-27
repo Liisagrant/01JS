@@ -9,12 +9,33 @@
         // object has no properties and false if there is
         // at least one property.
 
-        function isEmpty(obj) {
+        var someObject = {
+            //empty object
+        }
+
+        var someObject1 ={
+            name:"Lisa" // object with property.
+            //name(key), value(Lisa)
+        }
+
+        function isEmpty(obj){
+            for (var key in obj) {
+                return false;
+            }
+            return true
+        }
+
+        console.log(isEmpty(someObject));// sjeker om someObject er tom (har en key i seg) som den ikke har. derfor = true.
+        console.log(isEmpty(someObject1));// sjekker om someObject1 har noe i seg (key) Som den har. derfor ikke tom. false.
+
+
+
+       /* function isEmpty(obj) {
             for (var key in obj) {
                 return false;
             }
             return true;
-        }
+        }*/
     </script>
 
 </head>
